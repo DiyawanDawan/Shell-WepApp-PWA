@@ -30,12 +30,13 @@ body {
 .app-bar .app-bar__menu {
   display: flex;
   align-items: center;
+  color: #db0000;
 }
 
 .app-bar .app-bar__menu button {
   background-color: transparent;
   border: none;
-  font-size: 18px;
+  font-size: 40px;
   padding: 8px;
   cursor: pointer;
 }

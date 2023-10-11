@@ -9,6 +9,7 @@
   }
 
   .app-bar .app-bar__menu {
+    color: blue;
     display: none;
   }
 
