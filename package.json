@@ -4,7 +4,6 @@
   "description": "App shell",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start-dev": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
@@ -20,13 +19,18 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.28.1",
     "html-webpack-plugin": "^5.5.3",
+    "http-server": "^14.1.1",
     "style-loader": "^3.3.3",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1",
-    "webpack-merge": "^5.9.0"
+    "webpack-merge": "^5.9.0",
+    "workbox-webpack-plugin": "^7.0.0"
   },
   "dependencies": {
-    "regenerator-runtime": "^0.14.0"
+    "regenerator-runtime": "^0.14.0",
+    "workbox-routing": "^7.0.0",
+    "workbox-strategies": "^7.0.0",
+    "workbox-window": "^7.0.0"
   }
 }
