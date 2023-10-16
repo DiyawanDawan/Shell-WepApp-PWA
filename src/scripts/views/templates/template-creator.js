@@ -20,7 +20,7 @@ const createMovieDetailTemplate = (movie) =>/* html */ `
   </div>
 `;
 
-const createMovieItemTemplate = (movie) => `
+const createMovieItemTemplate = (movie) => /* html */ `
   <div class="movie-item">
     <div class="movie-item__header">
       <img class="movie-item__header__poster" alt="${movie.title}"
@@ -36,4 +36,21 @@ const createMovieItemTemplate = (movie) => `
   </div>
 `;
 
-export { createMovieItemTemplate, createMovieDetailTemplate };
+const createLikeButtonTemplate = () => `
+  <button aria-label="like this movie" id="likeButton" class="like">
+    <i class="fa fa-heart-o" aria-hidden="true"></i>
+  </button>
+`;
+
+const createLikedButtonTemplate = () => `
+  <button aria-label="unlike this movie" id="likeButton" class="like">
+    <i class="fa fa-heart" aria-hidden="true"></i>
+  </button>
+`;
+
+export {
+  createMovieItemTemplate,
+  createMovieDetailTemplate,
+  createLikeButtonTemplate,
+  createLikedButtonTemplate,
+};

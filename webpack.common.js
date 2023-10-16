@@ -9,7 +9,7 @@ module.exports = {
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    // path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
   module: {
@@ -61,3 +61,15 @@ module.exports = {
     }),
   ],
 };
+
+// output: {
+  // filename: '[name].bundle.js',
+  // path: path.resolve(__dirname, 'dist'),
+  // clean: true,
+// },
+
+
+// entry: {
+//   app: path.resolve(__dirname, 'src/scripts/index.js'),
+//   // sw: path.resolve(__dirname, 'src/scripts/sw.js'), <---- hapus ini
+// },
