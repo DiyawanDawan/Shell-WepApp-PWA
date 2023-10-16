@@ -1,14 +1,12 @@
-/* eslint-disable import/no-useless-path-segments */
 import 'regenerator-runtime';
 import '../styles/style.css';
 import '../styles/responsive.css';
 import App from './views/app';
 import WebSocketInitiator from './utils/websocket-initiator';
+import FooterToolsInitiator from './utils/footer-tools-initiator';
 import swRegister from './utils/sw-register';
 import CONFIG from './globals/config';
 
-// Api key 4313ad19d10dff5eb25b38cd673e3386
-// eslint-disable-next-line no-unused-vars
 const app = new App({
   button: document.querySelector('#hamburgerButton'),
   drawer: document.querySelector('#navigationDrawer'),
@@ -19,8 +17,14 @@ window.addEventListener('hashchange', () => {
   app.renderPage();
 });
 
-window.addEventListener('load', () => {
+window.addEventListener('load', async () => {
   app.renderPage();
-  swRegister();
+  await swRegister();
   WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
+
+  // Initialize footer tools
+  FooterToolsInitiator.init({
+    subscribeButton: document.querySelector('#subscribePushNotification'),
+    unsubscribeButton: document.querySelector('#unsubscribePushNotification'),
+  });
 });

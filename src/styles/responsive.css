@@ -9,7 +9,6 @@
   }
 
   .app-bar .app-bar__menu {
-    color: blue;
     display: none;
   }
 
@@ -46,6 +45,10 @@
   .movie .movie__overview {
     grid-column-start: 1;
     grid-column-end: 3;
+  }
+
+  footer #footerTools {
+    flex-direction: row;
   }
 }
 
